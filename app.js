@@ -46,18 +46,18 @@ users.forEach ((hobbit)=>{
 
 // ex3
 
-const nameAndScore = users.map((users)=>{
+const nameAndScore = users.map((user)=>{
     return {
-        name: users.name,
-        score: users.score,
+        name: user.name,
+        score: user.score,
     };
 });
 console.log(nameAndScore)
 
 // ex4
 
-const active = users.filter((users)=>{
-    return users.isActive == true
+const active = users.filter((user)=>{
+    return user.isActive == true
 });
 
 console.log(active);
@@ -71,8 +71,8 @@ const sort = users.sort((a,b)=>{
 console.log(sort)
 // ex 6
 
-const scoreSum = users.reduce((total, users)=>{
-    return total + users.score;
+const scoreSum = users.reduce((total, user)=>{
+    return total + user.score;
 },0);
 
 const averageScore = scoreSum / users.length;
